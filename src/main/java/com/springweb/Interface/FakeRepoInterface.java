@@ -1,17 +1,12 @@
 package com.springweb.Interface;
-
 import com.springweb.Entity.User;
 import java.util.Collection;
 
 public interface FakeRepoInterface {
-    //void insertUser(long id, String name, String surname){}
+    User insertUser(String name, String surname);
 
-    Collection<User> getAllUsers();
+    User findUserById(int id);
 
-    User insertUser(long id, String name, String surname);
-
-    User findUserById(long id);
-
-    User deleteUser(long id);
+    User deleteUser(int id);
 
 }
