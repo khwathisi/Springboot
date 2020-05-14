@@ -1,21 +1,24 @@
 package com.springweb.Interface;
 import com.springweb.Entity.User;
 import java.util.Collection;
+import java.util.Map;
 
-public class UserServiceImpl implements FakeRepoInterface {
+public class UserServiceImpl extends FakeRepo {
 
     @Override
     public User insertUser(String name, String surname) {
         try
         {
-            insertUser(name,surname);
+            //insertUser(name,surname);
+            return insertUser(name,surname);
         }catch(Exception e)
         {
             System.out.println("ERROR: " + e.getMessage());
         }
-        insertUser(name,surname);
+        //insertUser(name,surname);
         return null;
     }
+
 
     @Override
     public User findUserById(int id) {
